@@ -9,7 +9,7 @@ persuade them to do The Right Thing(tm).
 Right now there is no working nuget package yet, but there will be
 hopefully soon.
 
-So far, have a look at [ArchitectureComponentsSample/MainActivity.cs](ArchitectureComponentsSample/MainActivity.cs) to see how users code would look like.
+So far, have a look at [Binding/ArchitectureComponentsSample/MainActivity.cs](Binding/ArchitectureComponentsSample/MainActivity.cs) to see how users code would look like.
 Disregard the commented code - it is to show what the post-processing
 MSBuild task generates.
 
