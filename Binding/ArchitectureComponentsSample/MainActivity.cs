@@ -9,6 +9,9 @@ using Java.Lang;
 namespace ArchitectureComponentsSample
 {
 	[Activity (Label = "ArchitectureComponentsSample", MainLauncher = true)]
+	// FIXME: this requiring [Register] attribute it really stupid and Xamarin.Android team should immediately stop package name mangling into MD5
+	// or fix PackageNamingPolicy related bug that it is disregarded at all.
+	[global::Android.Runtime.Register ("architecturecomponentssample.MainActivity")]
 	public class MainActivity : LifecycleActivity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -25,6 +28,9 @@ namespace ArchitectureComponentsSample
 
 	// FIXME: this should not be public. [InternalsVisibleTo] is generated for the extensibility dll
 	// within this app before build, but it does not seem to work yet.
+	// FIXME: this requiring [Register] attribute it really stupid and Xamarin.Android team should immediately stop package name mangling into MD5
+	// or fix PackageNamingPolicy related bug that it is disregarded at all.
+	[global::Android.Runtime.Register ("architecturecomponentssample.TestObserver")]
 	public class TestObserver : Java.Lang.Object, ILifecycleObserver
 	{
 		[OnLifecycleEvent (OnLifecycleEvent.OnAny)]

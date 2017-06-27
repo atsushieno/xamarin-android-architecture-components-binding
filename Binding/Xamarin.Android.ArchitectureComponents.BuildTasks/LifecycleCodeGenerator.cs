@@ -34,6 +34,7 @@ namespace Android.ArchitectureComponents.BuildTasks
 			foreach (var t in types) {
 				writer.WriteLine (@"namespace {2}
 {{
+	[global::Android.Runtime.Register (""{3}{4}{5}_LifecycleAdapter"")]
 	class {0}_LifecycleAdapter  : global::Java.Lang.Object, global::Android.Arch.Lifecycles.IGenericLifecycleObserver
 	{{
 		readonly global::{1} mReceiver;
@@ -47,7 +48,7 @@ namespace Android.ArchitectureComponents.BuildTasks
 	
 		public void OnStateChanged(global::Android.Arch.Lifecycles.ILifecycleOwner owner, global::Android.Arch.Lifecycles.Lifecycle.Event evt)
 		{{
-", t.Name, t.FullName, t.Namespace);
+", t.Name, t.FullName, t.Namespace, t.Namespace.ToLowerInvariant (), t.Namespace.Length > 0 ? "." : "", t.Name);
 				foreach (var method in t.Methods.Where (m => m.CustomAttributes.Any (ca => ca.AttributeType.Name == "OnLifecycleEventAttribute" && ca.AttributeType.Namespace == lifecycle_ns))) {
 					var attr = method.CustomAttributes.First (ca => ca.AttributeType.Name == "OnLifecycleEventAttribute" && ca.AttributeType.Namespace == lifecycle_ns);
 					var evt = (int) attr.ConstructorArguments.First ().Value;
