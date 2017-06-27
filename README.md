@@ -26,3 +26,4 @@ depend on for future compatibility. But anyhow here is what the task does:
 
 The weird binding assembly names are due to my [binding automator tool](https://github.com/atsushieno/xamarin-android-binding-automator).
 
+Last but not least, current post-processing task deals with Lifecycle only.
