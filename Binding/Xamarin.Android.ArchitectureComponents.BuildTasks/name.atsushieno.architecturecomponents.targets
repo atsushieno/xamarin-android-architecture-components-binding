@@ -1,0 +1,49 @@
+﻿<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+<UsingTask TaskName="Android.ArchitectureComponents.BuildTasks.GenerateSources" AssemblyFile="Xamarin.Android.ArchitectureComponents.BuildTasks.dll" />
+
+<Target Name="_RunTimePropertyDefinitions">
+	<PropertyGroup>
+		<AndroidPackageNamingPolicy>Lowercase</AndroidPackageNamingPolicy>
+		<_XAAACIntermediate>$(IntermediateOutputPath)xamairn_android_architecture_components\</_XAAACIntermediate>
+		<_XAAACTargetAssembly>Xamarin.Android.ArchitectureComponents.Generated</_XAAACTargetAssembly>
+	</PropertyGroup>
+</Target>
+
+<Target Name="_GenerateInternalsVisibleTo" BeforeTargets="_ValidateAndroidPackageProperties" DependsOnTargets="_RunTimePropertyDefinitions">
+	<MakeDir Directories="$(_XAAACIntermediate)" />
+	<!-- FIXME: do not generate more than once -->
+	<WriteLinesToFile
+		File="$(_XAAACIntermediate)InternalsVisibles.cs"
+		Overwrite="True"
+		Lines="[assembly:System.Runtime.CompilerServices.InternalsVisibleTo(&quot;$(_XAAACTargetAssembly)&quot;)]" />
+</Target>
+
+<Target Name="_GenerateLifecycleAssembly" AfterTargets="_ResolveAssemblies" DependsOnTargets="_RunTimePropertyDefinitions">
+	<GenerateSources
+		Assemblies="@(ResolvedUserAssemblies)"
+		OutputSource="$(_XAAACIntermediate)GeneratedLifecycleObservers.cs" />
+
+	<Delete Files="$(_XAAACIntermediate)$(_XAAACTargetAssembly).dll" />
+	
+	<Csc
+		NoConfig="True"
+		NoStandardLib="True"
+		TargetType="library"
+		OutputAssembly="$(_XAAACIntermediate)$(_XAAACTargetAssembly).dll"
+		References="@(ResolvedAssemblies)"
+		Sources="$(_XAAACIntermediate)GeneratedLifecycleObservers.cs;$(_XAAACIntermediate)InternalsVisibles.cs" />
+
+	<CreateItem Include="$(_XAAACIntermediate)$(_XAAACTargetAssembly).dll">
+		<Output TaskParameter="Include" ItemName="Reference" />
+	</CreateItem>
+	<CreateItem Include="$(_XAAACIntermediate)$(_XAAACTargetAssembly).dll">
+		<Output TaskParameter="Include" ItemName="ResolvedAssemblies" />
+	</CreateItem>
+	<CreateItem Include="$(_XAAACIntermediate)$(_XAAACTargetAssembly).dll">
+		<Output TaskParameter="Include" ItemName="ResolvedUserAssemblies" />
+	</CreateItem>
+
+</Target>
+
+</Project>

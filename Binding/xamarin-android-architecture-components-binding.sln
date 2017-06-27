@@ -1,0 +1,53 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "android.arch.core_core_1.0.0-alpha1", "android.arch.core_core_1.0.0-alpha1\android.arch.core_core_1.0.0-alpha1.csproj", "{A7815CDB-EBFE-4CA2-B674-A0DC7CA6E27F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "android.arch.lifecycle_common_1.0.0-alpha1", "android.arch.lifecycle_common_1.0.0-alpha1\android.arch.lifecycle_common_1.0.0-alpha1.csproj", "{CBB494C0-EF32-4A07-A8DB-A0E606AE49D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "android.arch.lifecycle_runtime_1.0.0-alpha1", "android.arch.lifecycle_runtime_1.0.0-alpha1\android.arch.lifecycle_runtime_1.0.0-alpha1.csproj", "{855AAA9A-6159-4257-9867-B66D8B6F598C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchitectureComponentsSample", "ArchitectureComponentsSample\ArchitectureComponentsSample.csproj", "{7E461C0A-4F09-429C-A792-2CC1D52AC2D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Android.ArchitectureComponents.BuildTasks", "Xamarin.Android.ArchitectureComponents.BuildTasks\Xamarin.Android.ArchitectureComponents.BuildTasks.csproj", "{757183E5-6D81-42DD-8AEA-13642977DFAA}"
+EndProject
+Project("{5DD5E4FA-CB73-4610-85AB-557B54E96AA9}") = "NuGetPackaging", "NuGetPackaging\NuGetPackaging.nuproj", "{B65CD6B9-B821-4D1E-BED8-C5EFD816654E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildTaskTestRunner", "BuildTaskTestRunner\BuildTaskTestRunner.csproj", "{91130825-4624-4B49-914B-7E9A56CDA094}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7815CDB-EBFE-4CA2-B674-A0DC7CA6E27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7815CDB-EBFE-4CA2-B674-A0DC7CA6E27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7815CDB-EBFE-4CA2-B674-A0DC7CA6E27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7815CDB-EBFE-4CA2-B674-A0DC7CA6E27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBB494C0-EF32-4A07-A8DB-A0E606AE49D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB494C0-EF32-4A07-A8DB-A0E606AE49D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB494C0-EF32-4A07-A8DB-A0E606AE49D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB494C0-EF32-4A07-A8DB-A0E606AE49D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{855AAA9A-6159-4257-9867-B66D8B6F598C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{855AAA9A-6159-4257-9867-B66D8B6F598C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{855AAA9A-6159-4257-9867-B66D8B6F598C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{855AAA9A-6159-4257-9867-B66D8B6F598C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E461C0A-4F09-429C-A792-2CC1D52AC2D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E461C0A-4F09-429C-A792-2CC1D52AC2D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E461C0A-4F09-429C-A792-2CC1D52AC2D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E461C0A-4F09-429C-A792-2CC1D52AC2D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{757183E5-6D81-42DD-8AEA-13642977DFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{757183E5-6D81-42DD-8AEA-13642977DFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{757183E5-6D81-42DD-8AEA-13642977DFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{757183E5-6D81-42DD-8AEA-13642977DFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B65CD6B9-B821-4D1E-BED8-C5EFD816654E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B65CD6B9-B821-4D1E-BED8-C5EFD816654E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B65CD6B9-B821-4D1E-BED8-C5EFD816654E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B65CD6B9-B821-4D1E-BED8-C5EFD816654E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91130825-4624-4B49-914B-7E9A56CDA094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91130825-4624-4B49-914B-7E9A56CDA094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91130825-4624-4B49-914B-7E9A56CDA094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91130825-4624-4B49-914B-7E9A56CDA094}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

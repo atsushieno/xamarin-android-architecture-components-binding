@@ -1,0 +1,4 @@
+﻿<metadata>
+    <attr path="/api/package[@name='android.arch.lifecycle']" name="managedName">Android.Arch.Lifecycles</attr>
+    <attr path="/api/package[@name='android.arch.lifecycle']/interface[@name='LifecycleRegistryOwner']/method[@name='getLifecycle']" name="managedReturn">Android.Arch.Lifecycle.Lifecycle</attr>
+</metadata>
