@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <!-- The identifier that must be unique within the hosting gallery -->
+    <id>name.atsushieno.architecturecomponents</id>
+
+    <!-- The package version number that is used when resolving dependencies -->
+    <version>1.0.0-alpha1</version>
+
+    <!-- Authors contain text that appears directly on the gallery -->
+    <authors>Atsushi Eno</authors>
+
+    <!-- Owners are typically nuget.org identities that allow gallery
+            users to easily find other packages by the same owners.  -->
+    <owners>atsushieno</owners>
+
+    <!-- License and project URLs provide links for the gallery -->
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>http://github.com/atsushieno/xamarin-android-architecture-components-binding</projectUrl>
+
+    <!-- The icon is used in Visual Studio's package manager UI -->
+    <!-- iconUrl>http://github.com/contoso/UsefulStuff/nuget_icon.png</iconUrl -->
+
+    <!-- If true, this value prompts the user to accept the license when
+            installing the package. -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <!-- Any details about this particular release -->
+    <releaseNotes>Check the project website.</releaseNotes>
+
+    <!-- The description can be used in package manager UI. Note that the
+            nuget.org gallery uses information you add in the portal. -->
+    <description>API binding and MSBuild tasks to use Android Architecture Components.</description>
+
+    <!-- Copyright information -->
+    <copyright>Copyright ©2017 Microsoft Corporation</copyright>
+
+    <!-- Tags appear in the gallery and can be used for tag searches -->
+    <tags>xamarin android arhitecture support</tags>
+
+    <!-- Dependencies are automatically installed when the package is installed -->
+    <dependencies>
+        <dependency id="Xamarin.Android.Support.Fragment" version="25.3.1" />
+    </dependencies>
+  </metadata>
+
+  <!-- A readme.txt will be displayed when the package is installed -->
+  <files>
+    <file src="../README.md" target="" />
+    <file src="Xamarin.Android.ArchitectureComponents.BuildTasks/name.atsushieno.architecturecomponents.targets" target="build" />
+    <file src="Xamarin.Android.ArchitectureComponents.BuildTasks/bin/Debug/Xamarin.Android.ArchitectureComponents.BuildTasks.dll" target="build" />
+    <file src="Xamarin.Android.ArchitectureComponents.BuildTasks/bin/Debug/Mono.Cecil.dll" target="build" />
+    <file src="android.arch.core_core_1.0.0-alpha1/bin/Debug/android.arch.core_core_1.0.0-alpha1.dll" target="lib/MonoAndroid" />
+    <file src="android.arch.lifecycle_common_1.0.0-alpha1/bin/Debug/android.arch.lifecycle_common_1.0.0-alpha1.dll" target="lib/MonoAndroid" />
+    <file src="android.arch.lifecycle_runtime_1.0.0-alpha1/bin/Debug/android.arch.lifecycle_runtime_1.0.0-alpha1.dll" target="lib/MonoAndroid" />
+  </files>
+</package>
+
