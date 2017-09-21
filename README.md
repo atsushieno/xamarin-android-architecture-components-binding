@@ -1,13 +1,9 @@
 This is a proof-of-concept binding and post-processing MSBuild targets for
 Android Architecture Component libraries for Xamarin.Android.
 
-Right now there are couple of stupid limitations that I'm not sure if
-they are going to be fixed. I hope to have fixes but there are
-controvertial objections to fix issues in xamarin-android. We need to
-persuade them to do The Right Thing(tm).
-
-Right now there is no working nuget package yet, but there will be
-hopefully soon.
+If you are using Xamarin.Android before 92984e6 (which is, as of Sep. 2017,
+only in xamarin-android master, no packaged product), you need some
+additional [Register] attributes which makes almost everything useless.
 
 So far, have a look at [Binding/ArchitectureComponentsSample/MainActivity.cs](Binding/ArchitectureComponentsSample/MainActivity.cs) to see how users code would look like.
 Disregard the commented code - it is to show what the post-processing
@@ -22,7 +18,7 @@ depend on for future compatibility. But anyhow here is what the task does:
 
 - Generate C# source code after we get the actual app dll.
 - Call csc to compile it into another dll.
-- Add the resulting dll to the following build steps.
+- Add the resulting dll into the resulting apk.
 
 The weird binding assembly names are due to my [binding automator tool](https://github.com/atsushieno/xamarin-android-binding-automator).
 

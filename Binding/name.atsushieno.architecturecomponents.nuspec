@@ -5,7 +5,7 @@
     <id>name.atsushieno.architecturecomponents</id>
 
     <!-- The package version number that is used when resolving dependencies -->
-    <version>1.0.0-alpha1</version>
+    <version>1.0.0-alpha1-2</version>
 
     <!-- Authors contain text that appears directly on the gallery -->
     <authors>Atsushi Eno</authors>
