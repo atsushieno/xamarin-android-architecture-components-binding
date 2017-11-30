@@ -1,3 +1,5 @@
+**UPDATE**: we don't need this MSBuild post processing task anymore. Google's AAC works just with annotations, and Xamarin component team offers AAC bindings with additional attributes. Write code like `[Lifecycle.Event.OnResume][Export]` instead of `[OnLifecycleEvent(Event.OnResume)]` and you are all set!
+
 This is a proof-of-concept binding and post-processing MSBuild targets for
 Android Architecture Component libraries for Xamarin.Android.
 
